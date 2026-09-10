@@ -1,7 +1,6 @@
 const fixedTabs = document.querySelector('.fixed-tabs');
 const contactTab = document.querySelector('.contact-tab');
 const contactPanel = document.querySelector('.contact-panel');
-const contactClose = document.querySelector('.contact-close');
 
 const setContactPanelState = (isOpen) => {
   fixedTabs?.classList.toggle('contact-open', isOpen);
@@ -14,12 +13,7 @@ contactTab?.addEventListener('click', () => {
   setContactPanelState(!contactPanel?.classList.contains('is-open'));
 });
 
-contactClose?.addEventListener('click', () => {
-  setContactPanelState(false);
-});
-
-const copyEmailLinks = document.querySelectorAll('.copy-email-link');
-const copyPopup = document.querySelector('.copy-popup');
+const copyEmailLink = document.querySelector('.copy-email-link');
 
 const copyTextToClipboard = async (text) => {
   if (navigator.clipboard) {
@@ -38,18 +32,17 @@ const copyTextToClipboard = async (text) => {
   copyField.remove();
 };
 
-copyEmailLinks.forEach((copyEmailLink) => {
-  copyEmailLink.addEventListener('click', async (event) => {
-    event.preventDefault();
+copyEmailLink?.addEventListener('click', async (event) => {
+  event.preventDefault();
 
-    const copyText = copyEmailLink.dataset.copyText || 'placeholder text';
-    await copyTextToClipboard(copyText);
-    copyPopup?.classList.add('is-visible');
+  const copyText = copyEmailLink.dataset.copyText || 'placeholder text';
+  await copyTextToClipboard(copyText);
 
-    window.setTimeout(() => {
-      copyPopup?.classList.remove('is-visible');
-    }, 1200);
-  });
+  const originalText = copyEmailLink.textContent;
+  copyEmailLink.textContent = 'Copied';
+  window.setTimeout(() => {
+    copyEmailLink.textContent = originalText;
+  }, 1200);
 });
 
 if (fixedTabs) {

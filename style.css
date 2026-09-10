@@ -119,26 +119,6 @@
     color: var(--ink);
   }
 
-  .contact-close {
-    width: 100%;
-    padding: 9px 14px;
-    border: 1px solid rgba(56, 157, 219, 0.1);
-    border-radius: 6px;
-    background: rgba(56, 157, 219, 0.1);
-    color: var(--ink-dim);
-    cursor: pointer;
-    font: inherit;
-    font-size: 0.78rem;
-    transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
-    box-shadow: 0 0 10px rgba(56, 157, 219, 0.1);
-  }
-
-  .contact-close:hover,
-  .contact-close:focus-visible {
-    color: var(--ink);
-    background: rgba(86, 188, 249, 0.2);
-  }
-
   .contact-panel a:hover,
   .contact-panel a:focus-visible {
     color: var(--ink);
@@ -146,31 +126,6 @@
     border-color: rgba(149, 206, 238, 0.35);
     border-radius: 6px;
     box-shadow: inset 0 1px 0 rgba(181, 226, 249, 0.16), 0 22px 36px rgba(0, 25, 45, 0.3), 0 0 0 1px rgba(86, 188, 249, 0.16);
-  }
-
-  .copy-popup {
-    position: fixed;
-    left: 50%;
-    bottom: 28px;
-    z-index: 30;
-    padding: 9px 16px;
-    border: 1px solid rgba(149, 206, 238, 0.3);
-    border-radius: 8px;
-    background: rgba(56, 157, 219, 0.16);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 10px 24px rgba(0, 25, 45, 0.24);
-    color: var(--ink);
-    font-size: 0.8rem;
-    opacity: 0;
-    transform: translate(-50%, 10px);
-    pointer-events: none;
-    transition: opacity 180ms ease, transform 180ms ease;
-  }
-
-  .copy-popup.is-visible {
-    opacity: 1;
-    transform: translate(-50%, 0);
   }
 
   /* ---------- fixed cosmic background ---------- */
@@ -601,22 +556,20 @@
 
   .work-item:last-child { border-bottom: 1px solid var(--line); }
 
-  .work-item .year {
-    display: block;
-    width: 100%;
-    color: var(--ink-dim);
-    font-size: 0.9rem;
-    padding-top: 4px;
+  .work-image-wrap {
+    min-width: 0;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
   }
 
-  .work-item .year img {
+  .work-image {
     display: block;
     width: 100%;
-    height: auto;
-    max-height: 180px;
+    height: 100%;
+    min-height: 150px;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   .work-item h3 {
@@ -659,7 +612,6 @@
     color: var(--ink);
     font-size: 1.05rem;
     padding-bottom: 2px;
-    cursor:pointer;
   }
 
   footer a.contact-link:hover { color: var(--glow); }
