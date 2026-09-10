@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="fixed-tabs" aria-label="Quick navigation">
+  <button class="contact-tab" type="button" aria-expanded="false">Contact me</button>
+  <a href="https://github.com/locallysaved">Github</a>
+</nav>
+
+<nav class="contact-panel" aria-label="Contact links" aria-hidden="true">
+  <a href="#">Facebook</a>
+  <a href="#">LinkedIn</a>
+  <a class="copy-email-link" href="#contact" data-copy-text="ipb24.v.sekstello@vtdt.edu.lv">E-mail</a>
+  <button class="contact-close" type="button" aria-label="Close contact links">Close</button>
+</nav>
+
+<div class="copy-popup" role="status" aria-live="polite">Copied!</div>
+
+<div class="cosmos">
+  <div class="glow"></div>
+  <div class="particles">
+    <div class="rotate">
+      <div class="angle"><div class="size"><div class="position"><div class="pulse"><div class="particle"></div></div></div></div></div>
+      <div class="angle"><div class="size"><div class="position"><div class="pulse"><div class="particle"></div></div></div></div></div>
+      <div class="angle"><div class="size"><div class="position"><div class="pulse"><div class="particle"></div></div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <section class="hero">
+    <h1>Portfolio</h1>
+    <p class="lede"><em>Vanesa Šekstello</em></p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About me</h2>
+    <p class="about-intro">Currently studying in Vidzemes Tehnoloģiju un dizaina tehnikums, aspiring web developer</p>
+
+    <div class="dropdown-wrap">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+        <span class="dropdown-line" aria-hidden="true"></span>
+        <span class="dropdown-arrow">v</span>
+        <span class="dropdown-label"><em>my skills</em></span>
+        <span class="dropdown-arrow">v</span>
+        <span class="dropdown-line" aria-hidden="true"></span>
+        </button>
+
+        <div class="dropdown-panel skills-panel" aria-hidden="true">
+          <div class="about-columns">
+            <div class="about-column">
+              <h3>Languages</h3>
+              <ul>
+                <li>C++, C#, C</li>
+                <li>PHP, Python</li>
+                <li>.net, Javascript</li>
+              </ul>
+            </div>
+
+            <div class="about-column">
+              <h3>Other</h3>
+              <ul>
+                <li>SQL & databases</li>
+                <li>CRUD components</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="about-dropdowns">
+      <div class="dropdown-wrap">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+        <span class="dropdown-line" aria-hidden="true"></span>
+        <span class="dropdown-arrow">v</span>
+        <span class="dropdown-label"><em>my interests</em></span>
+        <span class="dropdown-arrow">v</span>
+        <span class="dropdown-line" aria-hidden="true"></span>
+        </button>
+
+        <div class="dropdown-panel" aria-hidden="true">
+          Spending too much time inside, if it's working on projects or spending free time on videogames, isn't great. So I also resort to leisurely sports outdoors to keep a healthy balance in life. I spend plenty time indulging in videogames and, once my eyes get tired of the screens, I resort to biking outside, going for a swim in a pool or a lake, or preferably, going out with friends :)
+        </div>
+    </div>
+
+    </div>
+  </section>
+
+  <section id="work">
+    <h2 class="section-title">Selected work</h2>
+
+    <div class="work-item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Classroom</h3>
+        <p>Primarily intended as a web platform for managing school classes and assignments, where teachers post tasks and students submit their work, however could be used for other purposes</p>
+        <span class="tag">2026</span>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="year">2024</div>
+      <div>
+        <h3>Koohat</h3>
+        <p>A simple alternative for quiz apps, offering anyone to create a quiz to challange their friends or test their skills.</p>
+        <span class="tag">2026</span>
+      </div>
+    </div>
+
+  </section>
+
+  <footer id="contact">
+    <h2>Interested in a collab?</h2>
+    <a class="contact-link copy-email-link" data-copy-text="ipb24.v.sekstello@vtdt.edu.lv">ipb24.v.sekstello@vtdt.edu.lv</a>
+    <p class="foot-note">Hit me up - usually answer in a day.</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
